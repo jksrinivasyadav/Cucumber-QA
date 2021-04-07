@@ -1,0 +1,19 @@
+package code_bindings;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.java.en.Given;
+
+public class LoginSteps {
+	
+	@Given("^Given Open application and enter url$")
+	public void open_Application_And_Enter_Url() {
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\jksri\\Downloads\\geckodriver-v0.29.0-win64");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.superdrug.com/");
+		System.out.println("Given Open application and enter url");	
+	}
+			
+}

@@ -1,0 +1,21 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class Base {
+	WebDriver driver; 
+	
+	public Base(WebDriver driver) {
+		this.driver = driver;
+		
+	}
+	public void navigate() {
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\jksri\\OneDrive\\Desktop\\Geckodriver.exe\\geckodriver.exe");
+		 DesiredCapabilities cap = DesiredCapabilities.firefox();
+		 cap.setCapability("marionette", true);
+		 driver = new FirefoxDriver();
+	}
+
+}

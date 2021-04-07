@@ -1,0 +1,19 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage extends BasePage {
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		
+	}
+	public LoginPage login() {
+		driver.findElement(By.cssSelector("#header > div.nav > div > div > nav > div.header_user_info > a")).click();
+		driver.findElement(By.cssSelector("#email")).sendKeys("selenium1986@gmail.com");
+		driver.findElement(By.cssSelector("#passwd")).sendKeys("Pass@123");
+		driver.findElement(By.cssSelector("#SubmitLogin")).click();
+		return new LoginPage(driver);
+	}
+
+}

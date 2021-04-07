@@ -1,0 +1,23 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+
+public class BasePage {
+	protected WebDriver driver;
+	
+	public BasePage(WebDriver driver) {
+		 this.driver = driver;
+		// driver.navigate().to("http://automationpractice.com/index.php");
+		 
+	}
+	public HomePage navigateTo() {
+		driver.navigate().to("http://automationpractice.com/index.php");
+		return new HomePage(driver);
+	}
+	
+}
+

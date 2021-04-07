@@ -1,0 +1,27 @@
+package code_bindings;
+
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class LoginSteps {
+	
+	@Given("^Given Open application and enter url$")
+	public void open_Application_And_Enter_Url() {
+		//System.setProperty("webdriver.gecko.driver", "C:\\Users\\jksri\\Downloads\\geckodriver-v0.29.0-win64");
+	//	WebDriver driver = new FirefoxDriver();
+	//	driver.get("https://www.superdrug.com/");
+		System.out.println("Given Open application and enter url");	
+	}
+	@When("^I enter username and password$")
+	public void when_I_Enter_Username_Password() {
+		System.out.println("I enter username and password");
+	}
+	@Then("^I verify message$")
+	public void verify_message() {
+		System.out.println("I verify message");
+	}
+			
+
+}

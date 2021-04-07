@@ -1,0 +1,4 @@
+Feature: Login functionality
+Scenario: Verify login
+Given Open application
+ 

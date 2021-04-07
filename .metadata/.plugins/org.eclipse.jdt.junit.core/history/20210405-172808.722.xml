@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="Cucumber_Selenium" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="runners.Runner" time="10.628">
+    <testsuite name="Feature: Title of your feature" time="10.628">
+      <testsuite name="Scenario: Title of your scenario" time="10.628">
+        <testcase name="Given I am accessing my webpage" classname="Scenario: Title of your scenario" time="0.0"/>
+        <testcase name="When I user my user and password" classname="Scenario: Title of your scenario" time="0.0"/>
+        <testcase name="And I should see error" classname="Scenario: Title of your scenario" time="0.001"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

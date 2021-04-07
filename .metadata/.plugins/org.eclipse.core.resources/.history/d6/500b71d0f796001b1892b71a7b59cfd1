@@ -1,0 +1,35 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LoginPages {
+	WebDriver driver;
+	
+	public LoginPages(WebDriver driver) {
+		this.driver = driver;
+
+	}
+	
+	By login = By.cssSelector("body > div.page > header > div > nav > div.rd-navbar-inner > div > a");
+	By user = By.cssSelector("#ui > div > div > form > div > div:nth-child(1) > div > input[type=text]");
+	By pass = By.cssSelector("#ui > div > div > form > div > div:nth-child(2) > div > input[type=password]");
+	
+	
+	public void clickLoginBttn() {
+		driver.findElement(login).click();
+		
+	}
+	public void navigateTo() {
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\jksri\\OneDrive\\Desktop\\Geckodriver.exe\\geckodriver.exe");
+	    driver = new FirefoxDriver();
+		driver.get("https://freecrm.com/");
+	}
+	public void enterUsernameAndPassword(String user, String pass) {
+		driver.findElement(user)
+		
+		
+	}
+	 
+}

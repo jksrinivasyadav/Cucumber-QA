@@ -1,0 +1,17 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+	WebDriver driver;
+	By signIn = By.cssSelector("#header > div.nav > div > div > nav > div.header_user_info > a");
+
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
+	}
+	public void clickSign() {
+		driver.findElement(signIn).click();
+	}
+
+}

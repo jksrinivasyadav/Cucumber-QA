@@ -1,0 +1,59 @@
+package stepDefinition;
+
+import java.util.concurrent.TimeUnit;
+
+
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import pages.BasePage;
+import pages.HomePage;
+import pages.LandingPage;
+import pages.LoginPage;
+
+public class Step {
+	WebDriver driver;
+	LoginPage loginpage;
+	
+	@Given("^I am accessing my webpage$")
+	public void i_am_accessing_my_webpage() throws Throwable {
+		loginpage = new LoginPage(driver);
+		loginpage.navigateTo();
+		
+		
+	}
+
+	@When("^I user my user and password$")
+	public void i_user_my_user_and_password() throws Throwable {
+	   
+		loginpage.clickSign();
+		
+		
+	}
+
+	@And("^I should see error$")
+	public void i_should_access_page() {
+	  
+	}
+	
+	@After
+	public void tearDown() {
+		
+	}
+	@Before
+	public void setup() {
+		
+		 //driver.get("http://automationpractice.com/index.php");
+	}
+
+
+}

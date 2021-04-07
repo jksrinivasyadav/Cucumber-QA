@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner" project="Cucumber_Selenium" tests="3" started="3" failures="0" errors="2" ignored="2">
+  <testsuite name="runners.Runner" time="0.0">
+    <testsuite name="Feature: Title of your feature" time="0.0">
+      <testsuite name="Scenario: Title of your scenario" time="0.0" incomplete="true">
+        <error>java.lang.NullPointerException&#13;
+	at pages.BasePage.navigateTo(BasePage.java:17)&#13;
+	at stepDefinition.Step.i_am_accessing_my_webpage(Step.java:30)&#13;
+	at ✽.Given I am accessing my webpage(Test.feature:6)&#13;
+&#13;
+</error>
+        <testcase name="Given I am accessing my webpage" classname="Scenario: Title of your scenario" time="0.0">
+          <error>java.lang.NullPointerException&#13;
+	at pages.BasePage.navigateTo(BasePage.java:17)&#13;
+	at stepDefinition.Step.i_am_accessing_my_webpage(Step.java:30)&#13;
+	at ✽.Given I am accessing my webpage(Test.feature:6)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="When I user my user and password" classname="Scenario: Title of your scenario" time="0.0" ignored="true"/>
+        <testcase name="And I should see error" classname="Scenario: Title of your scenario" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,21 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPages extends BasePages{
+	WebDriver driver;
+	public LoginPages(WebDriver driver) {
+           super(driver);
+	}
+	
+	By login = By.cssSelector("body > div.page > header > div > nav > div.rd-navbar-inner > div > a;");
+	
+	
+	public LoginPages clickLoginBttn() {
+		driver.findElement(login).click();
+		return new LoginPages(driver);
+		
+	}
+	 
+}

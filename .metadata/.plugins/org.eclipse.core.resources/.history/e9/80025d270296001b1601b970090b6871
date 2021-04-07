@@ -1,0 +1,17 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LandingPage {
+	WebDriver driver;
+	public LandingPage(WebDriver driver) {
+		super();
+		
+	}
+	public LandingPage landing() {
+		driver.findElement(By.cssSelector("#center_column > div.alert.alert-danger > p")).isDisplayed();
+		return new LandingPage(driver);
+	}
+
+}

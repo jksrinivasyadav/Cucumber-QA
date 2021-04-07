@@ -1,0 +1,6 @@
+Feature: Register with valid credentials
+Scenario: Verify user can register
+Given I m app homepage and click on login bttn
+When I enter valid user "<selenium1986@gmail.com>" and "<07484877850>"
+Then I should register successfully
+

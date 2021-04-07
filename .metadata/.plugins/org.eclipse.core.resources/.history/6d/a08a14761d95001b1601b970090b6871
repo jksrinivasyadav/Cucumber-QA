@@ -1,0 +1,5 @@
+Feature: Login functionality
+Scenario: Verify login
+Given Open application and enter url
+When I enter username and password
+Then I verify message

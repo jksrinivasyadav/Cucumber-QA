@@ -1,0 +1,20 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class BasePages {
+	WebDriver driver;
+	public BasePages(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public LoginPages navigateToSite() {
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\jksri\\OneDrive\\Desktop\\Geckodriver.exe\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://freecrm.com/");
+		System.out.println("Given Open application and enter url");
+		return new LoginPages(driver);	
+	}
+
+}

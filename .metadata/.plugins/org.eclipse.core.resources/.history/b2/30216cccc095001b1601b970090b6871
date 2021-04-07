@@ -1,0 +1,45 @@
+package stepDefinition;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Step {
+	WebDriver driver;
+	@Given("^I am accessing my webpage$")
+	public void i_am_accessing_my_webpage() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\jksri\\OneDrive\\Desktop\\Geckodriver.exe\\geckodriver.exe");
+		 DesiredCapabilities cap = DesiredCapabilities.firefox();
+		 cap.setCapability("marionette", true);
+        driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("http://automationpractice.com/index.php");
+	}
+
+	@When("^I user my user and password$")
+	public void i_user_my_user_and_password() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.cssSelector("#header > div.nav > div > div > nav > div.header_user_info > a")).click();
+		driver.findElement(By.cssSelector("#email")).sendKeys("selenium1986@gmail.com");
+		driver.findElement(By.cssSelector("#passwd")).sendKeys("Pass@123");
+		driver.findElement(By.cssSelector("#SubmitLogin")).click();
+	}
+
+	@Then("^I should access site$")
+	public void i_should_access_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.cssSelector("#center_column > div.alert.alert-danger > p")).click();
+		driver.quit();
+	}
+
+
+}

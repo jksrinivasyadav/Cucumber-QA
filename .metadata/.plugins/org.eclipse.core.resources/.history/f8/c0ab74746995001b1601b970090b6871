@@ -1,0 +1,11 @@
+package runners;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+@CucumberOptions(features="C:\\Users\\jksri\\eclipse-workspace\\SuperdrugTest\\src\\test\\java\\features\\Login.feature",glue= {"stepDefinition"})
+@RunWith(Cucumber.class)
+public class Runner {
+
+}

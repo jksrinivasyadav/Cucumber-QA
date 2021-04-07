@@ -1,0 +1,18 @@
+package stepDefinition;
+
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.en.Given;
+import pages.RegisterPage;
+
+public class RegisterSteps {
+	WebDriver driver;
+	RegisterPage regpage;
+	
+	@Given("^I m app homepage and click on login bttn$")
+	public void goToPage() {
+		regpage = new RegisterPage(driver);
+		
+	}
+
+}

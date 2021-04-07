@@ -1,0 +1,63 @@
+package stepDefinition;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import pages.HomePage;
+import pages.LandingPage;
+import pages.LoginPage;
+
+public class Step {
+	WebDriver driver;
+	LoginPage loginpage;
+	LandingPage landing;
+	HomePage homepage;
+	
+	@Given("^I am accessing my webpage$")
+	public void i_am_accessing_my_webpage() throws Throwable {
+		
+		homepage = new HomePage(driver);
+		//loginpage.navigateTo();
+		homepage.clickSignIn();
+		
+	}
+
+	@When("^I user my user and password$")
+	public void i_user_my_user_and_password() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		loginpage = new LoginPage(driver);
+		loginpage.login();
+		
+	}
+
+	@And("^I should see error$")
+	public void i_should_access_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		landing.landing();
+	}
+	
+	@After
+	public void tearDown() {
+		driver.quit();
+		
+	}
+	
+	public void setup() {
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\jksri\\OneDrive\\Desktop\\Geckodriver.exe\\geckodriver.exe");
+		 DesiredCapabilities cap = DesiredCapabilities.firefox();
+		 cap.setCapability("marionette", true);
+		 driver = new FirefoxDriver();
+	}
+
+
+}

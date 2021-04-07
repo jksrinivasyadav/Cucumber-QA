@@ -1,0 +1,17 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage extends BasePage {
+
+	public LoginPage(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+		super(driver);
+	}
+	public LoginPage clickSign() {
+		driver.findElement(By.cssSelector("test")).click();
+		return new LoginPage(driver);
+	}
+
+}
